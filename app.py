@@ -171,7 +171,26 @@ st.markdown(
 )
 
 # ============================================================
-# 4. CONEXIÓN CON GEMINI
+# 4. ENCABEZADOS Y TÍTULOS SUPERIORES VISIBLES
+# ============================================================
+
+st.title("🕯️ El Oráculo del Mictlán 💀")
+st.markdown(
+    '<p class="subtitulo">"Donde las almas y la sabiduría ancestral se'
+    ' encuentran." 🍂</p>',
+    unsafe_allow_html=True,
+)
+
+# Título creativo superior adicional que pediste
+st.markdown(
+    f"<h3 style='text-align: center; color: #ffbf69; font-family: Cinzel, serif;"
+    f" text-shadow: 1px 1px 5px rgba(255,191,105,0.3); margin-top: 10px;"
+    f" margin-bottom: 20px;'>{TITULO_SUPERIOR}</h3>",
+    unsafe_allow_html=True,
+)
+
+# ============================================================
+# 5. CONEXIÓN CON GEMINI
 # ============================================================
 
 
@@ -182,8 +201,6 @@ def obtener_api_key():
   except Exception:
     pass
   return os.environ.get("GEMINI_API_KEY", "")
-
-
 
 
 cliente = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
@@ -244,7 +261,7 @@ def mensaje_de_error(e):
 
 
 # ============================================================
-# 5. ESTADO DE LA SESIÓN Y BARRA LATERAL (SIDEBAR)
+# 6. ESTADO DE LA SESIÓN Y BARRA LATERAL (SIDEBAR)
 # ============================================================
 
 if "mensajes" not in st.session_state:
@@ -267,15 +284,8 @@ with st.sidebar:
     st.rerun()
 
 # ============================================================
-# 6. MOSTRAR EL HISTORIAL DEL CHAT (Con el título creativo arriba)
+# 7. MOSTRAR EL HISTORIAL DEL CHAT
 # ============================================================
-
-# Título creativo arriba del cuadro de bienvenida / mensajes
-st.markdown(
-    f"<h3 style='text-align: center; color: #ffbf69; font-family: Cinzel, serif;"
-    f" text-shadow: 1px 1px 5px rgba(255,191,105,0.3);'>{TITULO_SUPERIOR}</h3>",
-    unsafe_allow_html=True,
-)
 
 with st.chat_message("assistant", avatar="💀"):
   st.markdown(BIENVENIDA)
@@ -286,7 +296,7 @@ for m in st.session_state.mensajes:
     st.markdown(m["content"])
 
 # ============================================================
-# 7. ENTRADA DEL USUARIO (Escrita o por Botón Rápido)
+# 8. ENTRADA DEL USUARIO (Escrita o por Botón Rápido)
 # ============================================================
 
 texto_escrito = st.chat_input("Escribe tu pregunta al Oráculo... 🕯️")
