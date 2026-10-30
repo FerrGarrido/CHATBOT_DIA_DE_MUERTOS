@@ -113,8 +113,9 @@ st.markdown(
         font-size: 1.05rem;
     }
     
-    /* 4. ELIMINAR BLANCO EN EL FOOTER / CONTENEDOR INFERIOR */
-    .st-emotion-cache-128upt6, 
+    /* 4. ELIMINAR EL BLANCO DE LA NUEVA CLASE NUBE Y CONTENEDORES INFERIORES */
+    .st-emotion-cache-6mn6c9,
+    .st-emotion-cache-1wp6n47,
     div[data-testid="stBottomBlockContainer"], 
     div[data-testid="stBottom"], 
     .stChatFloatingInputContainer {
@@ -122,13 +123,13 @@ st.markdown(
         background-color: transparent !important;
     }
     
-    /* Forzar que el bloque inferior adopte el mismo fondo oscuro sin recuadros blancos */
+    /* Forzar que el contenedor principal inferior adopte el fondo oscuro del Mictlán */
     div[data-testid="stBottomBlockContainer"] {
-        
+        background: linear-gradient(135deg, #0b0714 0%, #1a0b2e 100%) !important;
     }
 
     /* 5. Estilo místico del recuadro central donde escribes */
-    div[data-testid="stChatInput"] {
+    div[data-testid="stChatInput"], .st-emotion-cache-6mn6c9 {
         background-color: #12061f !important;
         border: 2px solid #ff9f1c !important;
         border-radius: 14px !important;
@@ -136,7 +137,7 @@ st.markdown(
     }
     
     /* Área de texto interna del input */
-    div[data-testid="stChatInput"] textarea {
+    div[data-testid="stChatInput"] textarea, .st-emotion-cache-dx87ye textarea {
         color: #ffffff !important;
         background-color: transparent !important;
     }
