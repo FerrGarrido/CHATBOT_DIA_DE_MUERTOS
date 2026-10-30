@@ -80,7 +80,7 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* 1. Fondo general de la aplicación y header con degradado uniforme */
+    /* 1. Fondo general de la aplicación, header y elementos principales */
     .stApp, [data-testid="stHeader"], [data-testid="stToolbar"] {
         background: linear-gradient(135deg, #0b0714 0%, #1a0b2e 100%) !important;
         color: #ffffff !important;
@@ -113,23 +113,19 @@ st.markdown(
         font-size: 1.05rem;
     }
     
-    /* 4. ELIMINAR EL BLANCO DE LA NUEVA CLASE NUBE Y CONTENEDORES INFERIORES */
+    /* 4. ELIMINAR EL BLANCO DE LA CLASE ESPECÍFICA Y CONTENEDORES INFERIORES */
+    .st-emotion-cache-128upt6,
     .st-emotion-cache-6mn6c9,
     .st-emotion-cache-1wp6n47,
     div[data-testid="stBottomBlockContainer"], 
     div[data-testid="stBottom"], 
     .stChatFloatingInputContainer {
-        background: transparent !important;
+        background: linear-gradient(135deg, #0b0714 0%, #1a0b2e 100%) !important;
         background-color: transparent !important;
     }
     
-    /* Forzar que el contenedor principal inferior adopte el fondo oscuro del Mictlán */
-    div[data-testid="stBottomBlockContainer"] {
-        background: linear-gradient(135deg, #0b0714 0%, #1a0b2e 100%) !important;
-    }
-
     /* 5. Estilo místico del recuadro central donde escribes */
-    div[data-testid="stChatInput"], .st-emotion-cache-6mn6c9 {
+    div[data-testid="stChatInput"] {
         background-color: #12061f !important;
         border: 2px solid #ff9f1c !important;
         border-radius: 14px !important;
@@ -137,7 +133,7 @@ st.markdown(
     }
     
     /* Área de texto interna del input */
-    div[data-testid="stChatInput"] textarea, .st-emotion-cache-dx87ye textarea {
+    div[data-testid="stChatInput"] textarea {
         color: #ffffff !important;
         background-color: transparent !important;
     }
@@ -171,14 +167,6 @@ st.markdown(
     }
     </style>
     """,
-    unsafe_allow_html=True,
-)
-
-# Encabezados principales de la app
-st.title("🕯️ El Oráculo del Mictlán 💀")
-st.markdown(
-    '<p class="subtitulo">"Donde las almas y la sabiduría ancestral se'
-    ' encuentran." 🍂</p>',
     unsafe_allow_html=True,
 )
 
