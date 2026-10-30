@@ -197,7 +197,6 @@ def obtener_api_key():
 
 
 
-
 cliente = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 
