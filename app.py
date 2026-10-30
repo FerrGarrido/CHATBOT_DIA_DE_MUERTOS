@@ -82,7 +82,7 @@ st.markdown(
     <style>
     /* 1. Fondo general de la aplicación, header y elementos principales */
     .stApp, [data-testid="stHeader"], [data-testid="stToolbar"] {
-        
+        background: linear-gradient(135deg, #0b0714 0%, #1a0b2e 100%) !important;
         color: #ffffff !important;
     }
     
@@ -120,7 +120,7 @@ st.markdown(
     div[data-testid="stBottomBlockContainer"], 
     div[data-testid="stBottom"], 
     .stChatFloatingInputContainer {
-        background: linear-gradient(135deg, #0b0714 0%, #1a0b2e 100%) !important;
+       
         background-color: transparent !important;
     }
     
