@@ -129,7 +129,7 @@ st.markdown(
         background-color: #12061f !important;
         border: 2px solid #ff9f1c !important;
         border-radius: 14px !important;
-        box-shadow: 0 0 15px rgba(255, 159, 28, 0.4) !important;
+        
     }
     
     /* Área de texto interna del input */
